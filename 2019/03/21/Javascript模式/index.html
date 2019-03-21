@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html style="display: none" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Javascript模式 | 
+        
+        Rachel
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Rachel">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content=",web前端,javascript">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.jpg">
+    <link rel="icon" sizes="192x192" href="/img/favicon.jpg">
+    <link rel="apple-touch-icon" href="/img/favicon.jpg">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Rachel">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Javascript模式 | Rachel">
+    <meta property="og:image" content="http://yoursite.com/img/favicon.jpg">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="web前端"> <meta property="og:article:tag" content="javascript"> 
+
+    
+        <meta property="article:published_time" content="Thu Mar 21 2019 17:25:37 GMT+0800">
+        <meta property="article:modified_time" content="Thu Mar 21 2019 17:26:11 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Javascript模式 | Rachel">
+    <meta name="twitter:description" content>
+    <meta name="twitter:image" content="http://yoursite.com/img/favicon.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://yoursite.com">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/03/21/Javascript模式/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/03/21/Javascript模式/index.html",
+    "headline": "Javascript模式",
+    "datePublished": "Thu Mar 21 2019 17:25:37 GMT+0800",
+    "dateModified": "Thu Mar 21 2019 17:26:11 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Rachel",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/useravatar.png"
+        },
+        "description": "Hi, nice to meet you <br />email: xiaoyuqing0515@gmail.com <br/> github: <a href='https://github.com/xiaoyuqing'>https://github.com/xiaoyuqing</a>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Rachel",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.jpg"
+        }
+    },
+    "keywords": ",web前端,javascript",
+    "description": "",
+}
+</script>
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+    
+        <body id="scheme-Isolation" class="lazy">
+            <div class="material-layout mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;Rachel
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="Rachel">
+                Rachel
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you <br>email: xiaoyuqing0515@gmail.com <br> github: <a href="https://github.com/xiaoyuqing">https://github.com/xiaoyuqing</a>
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>主页</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+    </div>
+</header>
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+
+                    <!-- Post TOC -->
+
+    
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/useravatar.png" class="avatar-img" width="44px" height="44px" alt="Rachel's avatar">
+            <span class="name-span">Rachel</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+
+    
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                Javascript模式
+            </p>
+            <h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Universe</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//缓存实例</span></span><br><span class="line">    <span class="keyword">var</span> instance;</span><br><span class="line">    <span class="comment">//重写构造函数</span></span><br><span class="line">    Universe = <span class="function"><span class="keyword">function</span> <span class="title">Universe</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">//保留原型属性</span></span><br><span class="line">    Universe.prototype = <span class="keyword">this</span>;</span><br><span class="line">    <span class="comment">//实例</span></span><br><span class="line">    instance = <span class="keyword">new</span> Universe();</span><br><span class="line">    <span class="comment">//重置构造函数指针</span></span><br><span class="line">    instance.constructor = Universe;</span><br><span class="line">    <span class="comment">//所有功能</span></span><br><span class="line">    instance. start_time =<span class="number">0</span>;</span><br><span class="line">    instance.bang = <span class="string">"Big"</span>;</span><br><span class="line">    <span class="keyword">return</span> instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="另一种写法"><a href="#另一种写法" class="headerlink" title="另一种写法"></a>另一种写法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Universe;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> instance;</span><br><span class="line">    Universe = <span class="function"><span class="keyword">function</span> <span class="title">Universe</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (instance) &#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">      &#125;</span><br><span class="line">      instance = <span class="keyword">this</span>;</span><br><span class="line">    </span><br><span class="line">      <span class="keyword">this</span>.start_time = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">this</span>.bang = <span class="string">"Big"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CarMaker</span>(<span class="params"></span>) </span>&#123; &#125;</span><br><span class="line"><span class="comment">// a method of the parent</span></span><br><span class="line">CarMaker.prototype.drive = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"Vroom, I have "</span> + <span class="keyword">this</span>.doors + <span class="string">" doors"</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//静态工厂方法</span></span><br><span class="line">CarMaker.factory = <span class="function"><span class="keyword">function</span> (<span class="params">type</span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> constr = type,</span><br><span class="line">  newcar;</span><br><span class="line"><span class="comment">//如果构造函数不存在,则发生错误</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> CarMaker[constr] !== <span class="string">"function"</span>) &#123;</span><br><span class="line">  <span class="keyword">throw</span> &#123;</span><br><span class="line">    name: <span class="string">"Error"</span>,</span><br><span class="line">    message: constr + <span class="string">"doesn’t exist"</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> CarMaker[constr].prototype.drive !== <span class="string">"function"</span>) &#123;</span><br><span class="line">  CarMaker[constr].prototype = <span class="keyword">new</span> CarMaker();</span><br><span class="line">&#125;</span><br><span class="line">newcar = <span class="keyword">new</span> CarMaker[constr]();</span><br><span class="line">  <span class="keyword">return</span> newcar;</span><br><span class="line">&#125;;</span><br><span class="line">CarMaker.Compact = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.doors = <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line">CarMaker.Convertible = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.doors = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">CarMaker.SUV = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.doors = <span class="number">24</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="迭代模式"><a href="#迭代模式" class="headerlink" title="迭代模式"></a>迭代模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> agg = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">0</span>,</span><br><span class="line">      data = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">      length = data.length;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      next: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> element;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.hasNext()) &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        element = data[index];</span><br><span class="line">        index = index + <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">return</span> element;</span><br><span class="line">      &#125;,</span><br><span class="line">      hasNext: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> index &lt; length;</span><br><span class="line">      &#125;,</span><br><span class="line">      rewind: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        index = <span class="number">0</span>;</span><br><span class="line">      &#125;,</span><br><span class="line">      current: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data[index];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<h3 id="装饰器模式"><a href="#装饰器模式" class="headerlink" title="装饰器模式"></a>装饰器模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Sale</span>(<span class="params">price</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.price = price || <span class="number">100</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  Sale.prototype.getPrice = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.price;</span><br><span class="line">  &#125;</span><br><span class="line">  Sale.decorators = &#123;&#125;;</span><br><span class="line">  Sale.decorators.fedtax = &#123;</span><br><span class="line">    getPrice: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> price = <span class="keyword">this</span>.uber.getPrice();</span><br><span class="line">      price += price * <span class="number">5</span> / <span class="number">100</span>;</span><br><span class="line">      <span class="keyword">return</span> price;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  Sale.decorators.quebec = &#123;</span><br><span class="line">    getPrice: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> price = <span class="keyword">this</span>.uber.getPrice();</span><br><span class="line">      price += price * <span class="number">7.5</span> / <span class="number">100</span>;</span><br><span class="line">      <span class="keyword">return</span> price;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  Sale.decorators.money = &#123;</span><br><span class="line">    getPrice: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"$"</span> + <span class="keyword">this</span>.uber.getPrice().toFixed(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  Sale.decorators.cdn = &#123;</span><br><span class="line">    getPrice: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"CDN$ "</span> + <span class="keyword">this</span>.uber.getPrice().toFixed(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  Sale.prototype.decorate = <span class="function"><span class="keyword">function</span>(<span class="params">decorator</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">      overrides = <span class="keyword">this</span>.constructor.decorators[decorator],</span><br><span class="line">      i, newobj;</span><br><span class="line">    F.prototype = <span class="keyword">this</span>;</span><br><span class="line">    newobj = <span class="keyword">new</span> F();</span><br><span class="line">    newobj.uber = F.prototype;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> overrides) &#123;</span><br><span class="line">      <span class="keyword">if</span> (overrides.hasOwnProperty(i)) &#123;</span><br><span class="line">        newobj[i] = overrides[i];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> newobj;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> validator = &#123;</span><br><span class="line">    types: &#123;&#125;,</span><br><span class="line">    messages: [],</span><br><span class="line">    config: &#123;&#125;,</span><br><span class="line">    validate: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> i, msg, type, checker, result_ok;</span><br><span class="line">      <span class="keyword">this</span>.messages = [];</span><br><span class="line">      <span class="keyword">for</span> (i <span class="keyword">in</span> data) &#123;</span><br><span class="line">        <span class="keyword">if</span> (data.hasOwnProperty(i)) &#123;</span><br><span class="line">          type = <span class="keyword">this</span>.config[i];</span><br><span class="line">          checker = <span class="keyword">this</span>.types[type];</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span>(!type) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span> (!checker) &#123;</span><br><span class="line">            <span class="keyword">throw</span> &#123;</span><br><span class="line">              name: <span class="string">"ValidationError"</span>,</span><br><span class="line">              messages: <span class="string">"No handler to validate type "</span> + type</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125;</span><br><span class="line">          result_ok = checker.validate(data[i]);</span><br><span class="line">          <span class="keyword">if</span> (!result_ok) &#123;</span><br><span class="line">            msg = <span class="string">"Invalid value for *"</span> + i + <span class="string">"*, "</span> + checker.instructions;</span><br><span class="line">            <span class="keyword">this</span>.messages.push(msg);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.hasErrors();</span><br><span class="line">    &#125;,</span><br><span class="line">    hasErrors() &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.messages.length !== <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  validator.types.isNonEmpty = &#123;</span><br><span class="line">    validate: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> value !== <span class="string">""</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    instructions: <span class="string">"the value cannot be empty"</span></span><br><span class="line">  &#125;;</span><br><span class="line">  validator.types.isNumber = &#123;</span><br><span class="line">    validate: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> !<span class="built_in">isNaN</span>(value);</span><br><span class="line">    &#125;,</span><br><span class="line">    instructions: <span class="string">"the value can only be a valid number, e.g. 1, 3.14 or 2010"</span></span><br><span class="line">  &#125;;</span><br><span class="line">  validator.types.isAlphaNum = &#123;</span><br><span class="line">    validate: <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> !<span class="regexp">/[^a-z0-9]/i</span>.test(value);</span><br><span class="line">    &#125;,</span><br><span class="line">    instructions: <span class="string">"the value can only contain characters and numbers, no special symbols"</span></span><br><span class="line">  &#125;;</span><br><span class="line">  validator.config = &#123;</span><br><span class="line">    first_name: <span class="string">"isNonEmpty"</span>,</span><br><span class="line">    age: <span class="string">"isNumber"</span>,</span><br><span class="line">    username: <span class="string">"isAlphaNum"</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> data = &#123;</span><br><span class="line">    first_name: <span class="string">"super"</span>,</span><br><span class="line">    last_name: <span class="string">"Man"</span>,</span><br><span class="line">    age: <span class="string">"unknown"</span>,</span><br><span class="line">    username: <span class="string">"o_0"</span></span><br><span class="line">  &#125;</span><br><span class="line">  validator.validate(data);</span><br><span class="line">  <span class="keyword">if</span> (validator.hasErrors()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(validator.messages.join(<span class="string">"\n"</span>));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myevent = &#123;</span><br><span class="line">  stop: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> e.preventDefault === <span class="string">'function'</span>) &#123;</span><br><span class="line">      e.preventDefault();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> e.stopPropagation === <span class="string">'function'</span>) &#123;</span><br><span class="line">      e.stopPropagation();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> e.returnValue === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">      e.returnValue = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> e.cancelBubble === <span class="string">'boolean'</span>) &#123;</span><br><span class="line">      e.cancelBubble = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><blockquote>
+<p>作用：合并多个请求</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> proxy = &#123;</span><br><span class="line">  ids: [],</span><br><span class="line">  delay: <span class="number">50</span>,</span><br><span class="line">  timeout: <span class="literal">null</span>,</span><br><span class="line">  callback: <span class="literal">null</span>,</span><br><span class="line">  context: <span class="literal">null</span>,</span><br><span class="line">  makeRequest: <span class="function"><span class="keyword">function</span>(<span class="params">id, callback, context</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.ids.push(id);</span><br><span class="line">    <span class="keyword">this</span>.callback = callback;</span><br><span class="line">    <span class="keyword">this</span>.context = context;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.timeout) &#123;</span><br><span class="line">      <span class="keyword">this</span>.timeout = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        proxy.flush();</span><br><span class="line">      &#125;, <span class="keyword">this</span>.delay);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  flush: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    http.makeRequest(<span class="keyword">this</span>.ids, <span class="string">"proxy.handler"</span>);</span><br><span class="line">    <span class="keyword">this</span>.timeout = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">this</span>.ids = [];</span><br><span class="line">  &#125;,</span><br><span class="line">  handler: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i, max;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">parseInt</span>(data.query.count, <span class="number">10</span>) === <span class="number">1</span>) &#123;</span><br><span class="line">      proxy.callback.call(proxy.context, data.query.results.Video);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>, max = data.query.results.Video.length; i &lt; max; i += <span class="number">1</span>) &#123;</span><br><span class="line">      proxy.callback.call(proxy.context, data.query.results.Video[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// player constructor</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Player</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.points = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// play method</span></span><br><span class="line">Player.prototype.play = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.points += <span class="number">1</span>;</span><br><span class="line">    mediator.played();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// the scoreboard object</span></span><br><span class="line"><span class="keyword">var</span> scoreboard = &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// HTML element to be updated</span></span><br><span class="line">    element: <span class="built_in">document</span>.getElementById(<span class="string">'results'</span>),</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// update the score display</span></span><br><span class="line">    update: <span class="function"><span class="keyword">function</span> (<span class="params">score</span>) </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">var</span> i, msg = <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> score) &#123;</span><br><span class="line">            <span class="keyword">if</span> (score.hasOwnProperty(i)) &#123;</span><br><span class="line">                msg += <span class="string">'&lt;p&gt;&lt;strong&gt;'</span> + i + <span class="string">'&lt;\/strong&gt;: '</span>;</span><br><span class="line">                msg += score[i];</span><br><span class="line">                msg += <span class="string">'&lt;\/p&gt;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.element.innerHTML = msg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mediator = &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// all the players</span></span><br><span class="line">    players: &#123;&#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// </span></span><br><span class="line">    setup: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> players = <span class="keyword">this</span>.players;</span><br><span class="line">        players.home = <span class="keyword">new</span> Player(<span class="string">'Home'</span>);</span><br><span class="line">        players.guest = <span class="keyword">new</span> Player(<span class="string">'Guest'</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// someone plays, update the score</span></span><br><span class="line">    played: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> players = <span class="keyword">this</span>.players,</span><br><span class="line">            score = &#123;</span><br><span class="line">                Home:  players.home.points,</span><br><span class="line">                Guest: players.guest.points</span><br><span class="line">            &#125;;</span><br><span class="line">            </span><br><span class="line">        scoreboard.update(score);</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// handle user interactions</span></span><br><span class="line">    keypress: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        e = e || <span class="built_in">window</span>.event; <span class="comment">// IE</span></span><br><span class="line">        <span class="keyword">if</span> (e.which === <span class="number">49</span>) &#123; <span class="comment">// key "1"</span></span><br><span class="line">            mediator.players.home.play();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (e.which === <span class="number">48</span>) &#123; <span class="comment">// key "0"</span></span><br><span class="line">            mediator.players.guest.play();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// go!</span></span><br><span class="line">mediator.setup();</span><br><span class="line"><span class="built_in">window</span>.onkeypress = mediator.keypress;</span><br><span class="line"></span><br><span class="line"><span class="comment">// game over in 30 seconds</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.onkeypress = <span class="literal">null</span>;</span><br><span class="line">    alert(<span class="string">'Game over!'</span>);</span><br><span class="line">&#125;, <span class="number">30000</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> publisher = &#123;</span><br><span class="line">    subscribers: &#123;</span><br><span class="line">        any: [] <span class="comment">// event type: subscribers</span></span><br><span class="line">    &#125;,</span><br><span class="line">    subscribe: <span class="function"><span class="keyword">function</span> (<span class="params">fn, type</span>) </span>&#123;</span><br><span class="line">        type = type || <span class="string">'any'</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="keyword">this</span>.subscribers[type] === <span class="string">"undefined"</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.subscribers[type] = [];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.subscribers[type].push(fn);</span><br><span class="line">    &#125;,</span><br><span class="line">    unsubscribe: <span class="function"><span class="keyword">function</span> (<span class="params">fn, type</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.visitSubscribers(<span class="string">'unsubscribe'</span>, fn, type);</span><br><span class="line">    &#125;,</span><br><span class="line">    publish: <span class="function"><span class="keyword">function</span> (<span class="params">publication, type</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.visitSubscribers(<span class="string">'publish'</span>, publication, type);</span><br><span class="line">    &#125;,</span><br><span class="line">    visitSubscribers: <span class="function"><span class="keyword">function</span> (<span class="params">action, arg, type</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> pubtype = type || <span class="string">'any'</span>,</span><br><span class="line">            subscribers = <span class="keyword">this</span>.subscribers[pubtype],</span><br><span class="line">            i,</span><br><span class="line">            max = subscribers.length;</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; max; i += <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (action === <span class="string">'publish'</span>) &#123;</span><br><span class="line">                subscribers[i](arg);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (subscribers[i] === arg) &#123;</span><br><span class="line">                    subscribers.splice(i, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">var s1 = &#123;log: console.log&#125;,</span></span><br><span class="line"><span class="comment">    s2 = &#123;err: console.error&#125;,</span></span><br><span class="line"><span class="comment">    s3 = &#123;warn: console.warn&#125;;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">publisher.subscribe(s1.log);</span></span><br><span class="line"><span class="comment">publisher.subscribe(s2.err);</span></span><br><span class="line"><span class="comment">publisher.subscribe(s3.warn);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">publisher.publish(&#123;hello: "World"&#125;);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">publisher.unsubscribe(s2.err);</span></span><br><span class="line"><span class="comment">publisher.publish("hello");</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">publisher.subscribe(s1.log, "log");</span></span><br><span class="line"><span class="comment">publisher.publish(&#123;obj: "log this object"&#125;, "log");</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makePublisher</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> publisher) &#123;</span><br><span class="line">        <span class="keyword">if</span> (publisher.hasOwnProperty(i) &amp;&amp; <span class="keyword">typeof</span> publisher[i] === <span class="string">"function"</span>) &#123;</span><br><span class="line">            o[i] = publisher[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    o.subscribers = &#123;<span class="attr">any</span>: []&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> paper = &#123;</span><br><span class="line">    daily: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.publish(<span class="string">"big news today"</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    monthly: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.publish(<span class="string">"interesting analysis"</span>, <span class="string">"monthly"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">makePublisher(paper);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> joe = &#123;</span><br><span class="line">    drinkCoffee: <span class="function"><span class="keyword">function</span> (<span class="params">paper</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Just read '</span> + paper);</span><br><span class="line">    &#125;,</span><br><span class="line">    sundayPreNap: <span class="function"><span class="keyword">function</span> (<span class="params">monthly</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'About to fall asleep reading this '</span> + monthly);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">paper.subscribe(joe.drinkCoffee);</span><br><span class="line">paper.subscribe(joe.sundayPreNap, <span class="string">'monthly'</span>);</span><br><span class="line"></span><br><span class="line">paper.daily();</span><br><span class="line">paper.daily();</span><br><span class="line">paper.daily();</span><br><span class="line">paper.monthly();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">makePublisher(joe);</span><br><span class="line"></span><br><span class="line">joe.tweet = <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.publish(msg);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">paper.readTweets = <span class="function"><span class="keyword">function</span> (<span class="params">tweet</span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'Call big meeting! Someone '</span> + tweet);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">joe.subscribe(paper.readTweets);</span><br><span class="line"></span><br><span class="line">joe.tweet(<span class="string">"hated the paper today"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> publisher = &#123;</span><br><span class="line">    subscribers: &#123;</span><br><span class="line">        any: []</span><br><span class="line">    &#125;,</span><br><span class="line">    on: <span class="function"><span class="keyword">function</span> (<span class="params">type, fn, context</span>) </span>&#123;</span><br><span class="line">        type = type || <span class="string">'any'</span>;</span><br><span class="line">        fn = <span class="keyword">typeof</span> fn === <span class="string">"function"</span> ? fn : context[fn];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="keyword">this</span>.subscribers[type] === <span class="string">"undefined"</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.subscribers[type] = [];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.subscribers[type].push(&#123;<span class="attr">fn</span>: fn, <span class="attr">context</span>: context || <span class="keyword">this</span>&#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    remove: <span class="function"><span class="keyword">function</span> (<span class="params">type, fn, context</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.visitSubscribers(<span class="string">'unsubscribe'</span>, type, fn, context);</span><br><span class="line">    &#125;,</span><br><span class="line">    fire: <span class="function"><span class="keyword">function</span> (<span class="params">type, publication</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.visitSubscribers(<span class="string">'publish'</span>, type, publication);</span><br><span class="line">    &#125;,</span><br><span class="line">    visitSubscribers: <span class="function"><span class="keyword">function</span> (<span class="params">action, type, arg, context</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> pubtype = type || <span class="string">'any'</span>,</span><br><span class="line">            subscribers = <span class="keyword">this</span>.subscribers[pubtype],</span><br><span class="line">            i,</span><br><span class="line">            max = subscribers ? subscribers.length : <span class="number">0</span>;</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; max; i += <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (action === <span class="string">'publish'</span>) &#123;</span><br><span class="line">                subscribers[i].fn.call(subscribers[i].context, arg);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (subscribers[i].fn === arg &amp;&amp; subscribers[i].context === context) &#123;</span><br><span class="line">                    subscribers.splice(i, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makePublisher</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> publisher) &#123;</span><br><span class="line">        <span class="keyword">if</span> (publisher.hasOwnProperty(i) &amp;&amp; <span class="keyword">typeof</span> publisher[i] === <span class="string">"function"</span>) &#123;</span><br><span class="line">            o[i] = publisher[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    o.subscribers = &#123;<span class="attr">any</span>: []&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> game = &#123;</span><br><span class="line">    </span><br><span class="line">    keys: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">    addPlayer: <span class="function"><span class="keyword">function</span> (<span class="params">player</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> key = player.key.toString().charCodeAt(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">this</span>.keys[key] = player;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    handleKeypress: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        e = e || <span class="built_in">window</span>.event; <span class="comment">// IE</span></span><br><span class="line">        <span class="keyword">if</span> (game.keys[e.which]) &#123;</span><br><span class="line">            game.keys[e.which].play();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    handlePlay: <span class="function"><span class="keyword">function</span> (<span class="params">player</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> i, </span><br><span class="line">            players = <span class="keyword">this</span>.keys,</span><br><span class="line">            score = &#123;&#125;;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> players) &#123;</span><br><span class="line">            <span class="keyword">if</span> (players.hasOwnProperty(i)) &#123;</span><br><span class="line">                score[players[i].name] = players[i].points;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.fire(<span class="string">'scorechange'</span>, score);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Player</span>(<span class="params">name, key</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.points = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.key  = key;</span><br><span class="line">    <span class="keyword">this</span>.fire(<span class="string">'newplayer'</span>, <span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Player.prototype.play = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.points += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">this</span>.fire(<span class="string">'play'</span>, <span class="keyword">this</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> scoreboard = &#123;</span><br><span class="line">    </span><br><span class="line">    element: <span class="built_in">document</span>.getElementById(<span class="string">'results'</span>),</span><br><span class="line">    </span><br><span class="line">    update: <span class="function"><span class="keyword">function</span> (<span class="params">score</span>) </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">var</span> i, msg = <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> score) &#123;</span><br><span class="line">            <span class="keyword">if</span> (score.hasOwnProperty(i)) &#123;</span><br><span class="line">                msg += <span class="string">'&lt;p&gt;&lt;strong&gt;'</span> + i + <span class="string">'&lt;\/strong&gt;: '</span>;</span><br><span class="line">                msg += score[i];</span><br><span class="line">                msg += <span class="string">'&lt;\/p&gt;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.element.innerHTML = msg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">makePublisher(Player.prototype);</span><br><span class="line">makePublisher(game);</span><br><span class="line"></span><br><span class="line">Player.prototype.on(<span class="string">"newplayer"</span>, <span class="string">"addPlayer"</span>, game);</span><br><span class="line">Player.prototype.on(<span class="string">"play"</span>,      <span class="string">"handlePlay"</span>, game);</span><br><span class="line"></span><br><span class="line">game.on(<span class="string">"scorechange"</span>, scoreboard.update, scoreboard);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onkeypress = game.handleKeypress;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> playername, key;</span><br><span class="line"><span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">    playername = prompt(<span class="string">"Add player (name)"</span>);</span><br><span class="line">    <span class="keyword">if</span> (!playername) &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        key = prompt(<span class="string">"Key for "</span> + playername + <span class="string">"?"</span>);</span><br><span class="line">        <span class="keyword">if</span> (key) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">new</span> Player(playername,  key);    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
+        </div>
+    
+</div>
+
+                
+                    <!-- Paradox Post Info -->
+                    
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/03/21/《React设计模式与最佳实践》笔记/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+                    
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+</footer>
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+<script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+                </main>
+            </div>
+        </body>
+    
+</html>
